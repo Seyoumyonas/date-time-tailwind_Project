@@ -3,31 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind CSS Starter Kit</title>
+    <title>Custom Clock</title>
 
+    <!-- Link Tailwind CSS -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- JavaScript -->
     <script src="time.js" defer></script>
     <script src="date.js" defer></script>
-
 </head>
-<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+<body class="bg-gradient-to-r from-gray-900 via-green-800 to-gray-900 min-h-screen flex flex-col items-center justify-center">
 
-    <main class="text-center p-6 bg-white rounded-lg shadow-lg space-y-4">
+    <!-- Title -->
+    <h1 class="text-4xl font-bold text-green-400 mb-6">
+        Today's Date and Time is
+    </h1>
+
+    <!-- Main Section -->
+    <main class="text-center p-8 bg-gray-800 rounded-lg shadow-lg border border-gray-700">
         <!-- Time -->
-        <time class="time text-3xl font-bold text-blue-600">
-            <data class="hours">HH</data> :
-            <data class="minutes">MM</data> :
+        <time class="time flex justify-center items-center gap-4 text-7xl font-bold text-green-400">
+            <data class="hours">HH</data>
+            <span class="text-green-500">:</span>
+            <data class="minutes">MM</data>
+            <span class="text-green-500">:</span>
             <data class="seconds">SS</data>
-            <data class="amOrPM">AM/PM</data>
+            <data class="amOrPM text-xl font-medium text-green-300 ml-4 align-text-top">AM/PM</data>
         </time>
-      
+
         <!-- Date -->
-        <time class="date text-lg text-gray-600">
-            <data class="month">Month</data>
-            <data class="dayOfMonth">00</data>,
-            <data class="year">0000</data> -
-            <data class="dayOfWeek">SMTWTFS</data>
+        <time class="date mt-6 text-xl text-gray-300 font-medium">
+            <span class="month text-green-300">Month</span>
+            <span class="dayOfMonth text-green-500">00</span>,
+            <span class="year text-green-400">0000</span> -
+            <span class="dayOfWeek text-green-200">Day</span>
         </time>
     </main>
     
